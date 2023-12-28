@@ -24,7 +24,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/skbold"
         android:gravity="center"
-        android:text="Algorithm"
+        android:text="MatchMingle"
         android:textColor="#E94057"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,8 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/skregular"
         android:gravity="center"
-        android:text="Users going through a vetting process to ensure you never match with bots."
+        style="@style/text"
+        android:text= "Welcome to MatchMingle! 🌟\n Create, Connect, Ignite! 🚀"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,6 +49,7 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/text"
         android:layout_width="295dp"
         android:layout_height="56dp"
         android:layout_marginTop="20dp"
@@ -66,12 +68,13 @@
         android:layout_height="24dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:id="@+id/signIn"
         android:text="Already have an account? Sign In"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        style="@style/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
