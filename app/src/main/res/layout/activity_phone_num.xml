@@ -51,7 +51,6 @@
         app:ccp_showFlag="true"
         app:ccp_showNameCode="true"
         app:ccp_showFlagDialog="true"
-        app:ccp_showFastScroller="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
