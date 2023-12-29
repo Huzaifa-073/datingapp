@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Code extends AppCompatActivity {
 
@@ -16,12 +17,23 @@ public class Code extends AppCompatActivity {
         setContentView(R.layout.activity_code);
 
         ImageView back = findViewById(R.id.back);
+        TextView sendAgain = findViewById(R.id.sendagain);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PhoneNum.class);
                 startActivity(intent);
+                finish();
+            }
+        });
+
+        sendAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Profile.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
