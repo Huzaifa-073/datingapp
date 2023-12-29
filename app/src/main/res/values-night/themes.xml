@@ -5,6 +5,8 @@
         <item name="colorPrimary">#ffffff</item>
         <item name="colorSecondary">@color/red</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowBackground">#ffffff</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 

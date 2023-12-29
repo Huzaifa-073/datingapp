@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ public class Iam extends AppCompatActivity {
         CardView woman = findViewById(R.id.woman);
         CardView man = findViewById(R.id.man);
         ImageView back = findViewById(R.id.back);
+        Button submit = findViewById(R.id.submitButton);
 
         woman.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,15 @@ public class Iam extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Profile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Passions.class);
                 startActivity(intent);
                 finish();
             }
