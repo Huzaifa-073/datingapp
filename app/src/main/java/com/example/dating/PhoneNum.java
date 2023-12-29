@@ -2,6 +2,7 @@ package com.example.dating;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.os.Bundle;
@@ -23,19 +24,27 @@ public class PhoneNum extends AppCompatActivity {
         final EditText editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
         Button submitButton = findViewById(R.id.submitButton);
 
+//        submitButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String selectedCountryCode = countryCodePicker.getSelectedCountryCode();
+//                String phoneNumber = editTextPhoneNumber.getText().toString().trim();
+//
+//                if (phoneNumber.isEmpty()) {
+//                    Toast.makeText(PhoneNum.this, "Please enter a phone number", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    // Use selectedCountryCode and phoneNumber as needed
+//                    String completePhoneNumber = "+" + selectedCountryCode + phoneNumber;
+//                    Toast.makeText(PhoneNum.this, "Complete Phone Number: " + completePhoneNumber, Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String selectedCountryCode = countryCodePicker.getSelectedCountryCode();
-                String phoneNumber = editTextPhoneNumber.getText().toString().trim();
-
-                if (phoneNumber.isEmpty()) {
-                    Toast.makeText(PhoneNum.this, "Please enter a phone number", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Use selectedCountryCode and phoneNumber as needed
-                    String completePhoneNumber = "+" + selectedCountryCode + phoneNumber;
-                    Toast.makeText(PhoneNum.this, "Complete Phone Number: " + completePhoneNumber, Toast.LENGTH_SHORT).show();
-                }
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Code.class);
+                startActivity(intent);
             }
         });
     }
