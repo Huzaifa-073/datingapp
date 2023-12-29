@@ -3,9 +3,11 @@ package com.example.dating;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Iam extends AppCompatActivity {
@@ -17,6 +19,7 @@ public class Iam extends AppCompatActivity {
 
         CardView woman = findViewById(R.id.woman);
         CardView man = findViewById(R.id.man);
+        ImageView back = findViewById(R.id.back);
 
         woman.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +34,15 @@ public class Iam extends AppCompatActivity {
             public void onClick(View view) {
                 woman.setBackgroundColor(Color.WHITE);
                 man.setBackgroundColor(Color.parseColor("#E94057"));
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Profile.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

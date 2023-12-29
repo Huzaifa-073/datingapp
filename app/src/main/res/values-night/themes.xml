@@ -2,14 +2,19 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Dating" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">#000000</item>
-
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorSecondary">@color/red</item>
         <item name="android:windowIsTranslucent">true</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="text">
-        <item name="android:textColor"> #ffffff </item>
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/black</item> <!-- Set the desired border color -->
+        <item name="hintTextColor">@color/black</item> <!-- Set the desired hint text color -->
+    </style>
+    <style name="MyTextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="boxStrokeColor">@color/black</item> <!-- Set the desired border color -->
     </style>
 
+    <style name="Theme.Dating" parent="Base.Theme.Dating" />
 </resources>

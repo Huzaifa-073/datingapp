@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative"
+    android:background="@color/white"
     tools:context=".Profile">
 
     <TextView
@@ -27,71 +29,89 @@
         android:layout_marginStart="35dp"
         android:fontFamily="@font/skbold"
         android:textSize="34sp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="90dp"/>
 
     <LinearLayout
-        android:layout_marginLeft="140dp"
         android:id="@+id/img"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="101dp"
+        android:layout_height="106dp"
         android:layout_below="@id/details"
-        android:layout_marginTop="70dp">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="125dp"
+        android:gravity="center">
+
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_gravity="center"
             android:layout_width="101dp"
             android:layout_height="106dp"
-            android:src="@drawable/face"/>
+            android:layout_gravity="center"
+            android:src="@drawable/photo" />
+
     </LinearLayout>
 
 
     <LinearLayout
         android:gravity="center"
         android:layout_below="@id/img"
-        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTexts"
             style="@style/MyTextInputLayout"
-            android:layout_width="305dp"
-            android:layout_height="63dp"
+            android:layout_width="295dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
             android:hint="First Name">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText5"
                 style="@style/MyTextInputEditText"
                 android:fontFamily="@font/skregular"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:textColorHint="@color/black"
+                android:textColorLink="@color/black"
+                android:layout_width="295dp"
+                android:textCursorDrawable="@drawable/shape"
+                android:layout_height="60dp"
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textSize="14dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTexts1"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             style="@style/MyTextInputLayout"
-            android:layout_width="305dp"
-            android:layout_height="63dp"
-            android:hint="Last Name">
+            android:layout_width="295dp"
+            android:textColorHint="@color/black"
+            android:layout_height="67dp"
+            app:hintTextColor="@color/black"
+            android:hint="Last Name" >
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editText6"
                 style="@style/MyTextInputEditText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="295dp"
+                android:layout_height="60dp"
                 android:padding="10dp"
+                android:textCursorDrawable="@drawable/shape"
                 android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:textSize="14dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button
             android:id="@+id/birthDate"
-            android:layout_width="305dp"
+            android:layout_width="295dp"
             android:layout_height="58dp"
             android:layout_marginTop="15dp"
             android:background="#FDECEE"
@@ -104,7 +124,7 @@
             app:backgroundTint="@null" />
 
         <Button
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="125dp"
             android:id="@+id/button4"
             android:layout_width="295dp"
             android:layout_height="56dp"
@@ -112,6 +132,7 @@
             android:background="#E94057"
             android:fontFamily="@font/skbold"
             android:text="Confirm"
+            android:textColor="@color/white"
             android:textSize="16dp"
             app:backgroundTint="@null" />
 
@@ -121,6 +142,10 @@
         android:id="@+id/datePicker"
         android:layout_width="295dp"
         android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:calendarTextColor="@color/black"
+        android:yearListSelectorColor="@color/black"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"

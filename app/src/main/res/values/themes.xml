@@ -16,6 +16,5 @@
         <item name="boxStrokeColor">@color/black</item> <!-- Set the desired border color -->
     </style>
 
-
     <style name="Theme.Dating" parent="Base.Theme.Dating" />
 </resources>

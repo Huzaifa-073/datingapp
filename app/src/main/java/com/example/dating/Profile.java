@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -28,6 +29,7 @@ public class Profile extends AppCompatActivity {
         TextInputLayout editText2 = findViewById(R.id.editTexts1);
         EditText LastName = findViewById(R.id.editText6);
         ImageView personImage = findViewById(R.id.imageView3);
+        RelativeLayout relativeLayout = findViewById(R.id.relative);
 
         birthDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +49,21 @@ public class Profile extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Iam.class);
                 startActivity(intent);
+                finish();
+            }
+        });
+
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePicker.setVisibility(View.INVISIBLE);
+                datePicker.setVisibility(View.INVISIBLE);
+                firstName.setVisibility(View.VISIBLE);
+                LastName.setVisibility(View.VISIBLE);
+                birthDate.setVisibility(View.VISIBLE);
+                personImage.setVisibility(View.VISIBLE);
+                editText1.setVisibility(View.VISIBLE);
+                editText2.setVisibility(View.VISIBLE);
             }
         });
     }
