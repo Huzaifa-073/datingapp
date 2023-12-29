@@ -42,12 +42,13 @@
         app:layout_constraintTop_toBottomOf="@+id/back" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/woman"
         android:layout_width="295dp"
-        android:layout_height="51dp"
+        android:layout_height="58dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/myshape"
         android:foregroundGravity="center_vertical"
         app:cardBackgroundColor="@color/white"
-        android:background="@drawable/myshape"
         app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -76,5 +77,56 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/man"
+        android:layout_width="295dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/myshape"
+        android:foregroundGravity="center_vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/woman">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:drawableEnd="@drawable/male"
+                android:fontFamily="@font/skregular"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="Man"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="295dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/red"
+        android:fontFamily="@font/skbold"
+        android:text="Continue"
+        android:textSize="16dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
