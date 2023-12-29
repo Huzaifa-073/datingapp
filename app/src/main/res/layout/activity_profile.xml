@@ -42,63 +42,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="295dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/skregular"
-        android:hint="First Name"
-        android:inputType="textPersonName"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="295dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/skregular"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
-
-    <Button
-        android:layout_width="295dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/birthDate"
-        android:background="#FDECEE"
-        android:drawableLeft="@drawable/calendar"
-        android:fontFamily="@font/skbold"
-        android:gravity="center"
-        android:text="Choose birthday date"
-        android:textSize="14dp"
-        app:backgroundTint="@null"
-        android:textColor="#E94057"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
-
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:visibility="gone"
         android:layout_marginBottom="10dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,4 +69,79 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/birthDate"
+            android:layout_width="295dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="15dp"
+            android:background="#FDECEE"
+            android:drawableLeft="@drawable/calendar"
+            android:fontFamily="@font/skbold"
+            android:gravity="center"
+            android:text="Choose birthday date"
+            android:textColor="#E94057"
+            android:textSize="14dp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+        <LinearLayout
+            android:id="@+id/layoutBelow"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="431dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTexts"
+                style="@style/MyTextInputLayout"
+                android:layout_width="295dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="350dp"
+                android:hint="First Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText5"
+                    style="@style/MyTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTexts2"
+                style="@style/MyTextInputLayout"
+                android:layout_width="295dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="350dp"
+                android:hint="First Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText6"
+                    style="@style/MyTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="100dp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

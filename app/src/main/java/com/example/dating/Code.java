@@ -33,7 +33,7 @@ public class Code extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Profile.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
     }

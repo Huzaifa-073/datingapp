@@ -2,6 +2,7 @@ package com.example.dating;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -18,9 +19,10 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         Button birthDate = findViewById(R.id.birthDate);
+        Button confirmation = findViewById(R.id.button4);
         DatePicker datePicker = findViewById(R.id.datePicker);
         EditText firstName = findViewById(R.id.editText5);
-        EditText LastName = findViewById(R.id.editText6);
+//        EditText LastName = findViewById(R.id.editText6);
         ImageView personImage = findViewById(R.id.imageView3);
 
         birthDate.setOnClickListener(new View.OnClickListener() {
@@ -28,9 +30,17 @@ public class Profile extends AppCompatActivity {
             public void onClick(View view) {
                 datePicker.setVisibility(View.VISIBLE);
                 firstName.setVisibility(View.GONE);
-                LastName.setVisibility(View.GONE);
+//                LastName.setVisibility(View.GONE);
                 birthDate.setVisibility(View.GONE);
                 personImage.setVisibility(View.GONE);
+            }
+        });
+
+        confirmation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Iam.class);
+                startActivity(intent);
             }
         });
     }
