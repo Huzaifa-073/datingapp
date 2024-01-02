@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/constraint"
     android:background="@color/white"
     tools:context=".Passions">
 
@@ -71,6 +72,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/btn1"
             android:drawableLeft="@drawable/mycamera"
             android:fontFamily="@font/skregular"
             android:paddingStart="16dp"
@@ -98,6 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/section">
 
         <Button
+            android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/shopping"
@@ -128,6 +131,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cv">
 
         <Button
+            android:id="@+id/btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_voice"
@@ -157,6 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cv2">
 
         <Button
+            android:id="@+id/btn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_tennis"
@@ -187,6 +192,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
         <Button
+            android:id="@+id/btn5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/run"
@@ -217,6 +223,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
         <Button
+            android:id="@+id/btn6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_art"
@@ -248,6 +255,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
         <Button
+            android:id="@+id/btn7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_paragliding"
@@ -278,6 +286,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
         <Button
+            android:id="@+id/btn8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_music"
@@ -309,6 +318,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView7">
 
         <Button
+            android:id="@+id/btn9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_games"
@@ -339,6 +349,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView8">
 
         <Button
+            android:id="@+id/btn10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/my_hiking"
@@ -356,14 +367,16 @@
     </androidx.cardview.widget.CardView>
 
     <Button
+        android:id="@+id/next"
         android:layout_width="295dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/red"
         android:fontFamily="@font/skbold"
         android:text="Continue"
         android:textSize="16dp"
         app:backgroundTint="@null"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
