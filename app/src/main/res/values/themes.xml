@@ -27,5 +27,9 @@
         <item name="itemTextColor">#757575</item>
     </style>
 
+    <style name="MyBottomNavigationItemStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+    </style>
+
 
 </resources>

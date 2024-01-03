@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#E94057</color>
     <color name="border">#E8E6EA</color>
+    <color name="custom_selected_color">#800080</color> <!-- Purple color -->
+    <color name="custom_pressed_color">#ffffff</color> <!-- White color -->
+    <color name="custom_default_color">#000000</color> <!-- Default color -->
 </resources>
