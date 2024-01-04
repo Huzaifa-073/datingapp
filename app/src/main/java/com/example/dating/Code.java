@@ -6,7 +6,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +16,7 @@ public class Code extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code);
 
-        ImageView back = findViewById(R.id.back);
+        ImageView back = findViewById(R.id.backImage);
         TextView sendAgain = findViewById(R.id.sendagain);
         ConstraintLayout constraintLayout = findViewById(R.id.constraint);
 

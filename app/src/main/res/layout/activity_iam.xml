@@ -8,7 +8,7 @@
     tools:context=".Iam">
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/backImage"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -40,7 +40,7 @@
         android:textColor="@color/black"
         android:textSize="34dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back" />
+        app:layout_constraintTop_toBottomOf="@+id/backImage" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/woman"

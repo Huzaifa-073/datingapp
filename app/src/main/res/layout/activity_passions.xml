@@ -9,7 +9,7 @@
     tools:context=".Passions">
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/backImage"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -41,7 +41,7 @@
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back" />
+        app:layout_constraintTop_toBottomOf="@+id/backImage" />
 
     <TextView
         android:id="@+id/section"
@@ -118,7 +118,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/cvFour"
         android:layout_width="140dp"
         android:layout_height="45dp"
         android:layout_marginStart="40dp"
@@ -126,7 +126,7 @@
         android:layout_marginEnd="15dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView4"
+        app:layout_constraintEnd_toStartOf="@+id/cvThree"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cv">
 
@@ -149,7 +149,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
+        android:id="@+id/cvThree"
         android:layout_width="140dp"
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
@@ -157,7 +157,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toEndOf="@+id/cvFour"
         app:layout_constraintTop_toBottomOf="@+id/cv2">
 
         <Button
@@ -189,7 +189,7 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toStartOf="@+id/cardView6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintTop_toBottomOf="@+id/cvFour">
 
         <Button
             android:id="@+id/btn5"
@@ -220,7 +220,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cardView5"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+        app:layout_constraintTop_toBottomOf="@+id/cvThree">
 
         <Button
             android:id="@+id/btn6"

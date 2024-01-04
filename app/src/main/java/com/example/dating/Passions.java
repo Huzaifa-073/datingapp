@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +23,7 @@ public class Passions extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passions);
 
-        ImageView back = findViewById(R.id.back);
+        ImageView back = findViewById(R.id.backImage);
         Button next = findViewById(R.id.next);
         constraintLayout = findViewById(R.id.constraint);
 
@@ -41,8 +40,8 @@ public class Passions extends AppCompatActivity implements View.OnClickListener 
 
         cv1 = findViewById(R.id.cv);
         cv2 = findViewById(R.id.cv2);
-        cv3 = findViewById(R.id.cardView3);
-        cv4 = findViewById(R.id.cardView4);
+        cv3 = findViewById(R.id.cvFour);
+        cv4 = findViewById(R.id.cvThree);
         cv5 = findViewById(R.id.cardView5);
         cv6 = findViewById(R.id.cardView6);
         cv7 = findViewById(R.id.cardView7);
@@ -92,7 +91,6 @@ public class Passions extends AppCompatActivity implements View.OnClickListener 
             }
         });
     }
-
     @Override
     public void onClick(View view) {
         int item = view.getId();
@@ -100,9 +98,9 @@ public class Passions extends AppCompatActivity implements View.OnClickListener 
             changeColor(cv1, btn1, R.drawable.mycamera2);
         } else if (item == R.id.cv2 || item == R.id.btn2) {
             changeColor(cv2, btn2, R.drawable.shopping2);
-        } else if (item == R.id.cardView3 || item == R.id.btn3) {
+        } else if (item == R.id.cvFour || item == R.id.btn3) {
             changeColor(cv3, btn3, R.drawable.my_voice2);
-        } else if (item == R.id.cardView4 || item == R.id.btn4) {
+        } else if (item == R.id.cvThree || item == R.id.btn4) {
             changeColor(cv4, btn4, R.drawable.my_tennis2);
         } else if (item == R.id.cardView5 || item == R.id.btn5) {
             changeColor(cv5, btn5, R.drawable.my_run2);
@@ -129,14 +127,12 @@ public class Passions extends AppCompatActivity implements View.OnClickListener 
             changeColorTwo(cv10, btn10, R.drawable.my_hiking);
         }
     }
-
     public void changeColor ( CardView cv,  Button btn, int drawableId ) {
         cv.setBackgroundColor(Color.parseColor("#E94057"));
         btn.setBackgroundColor(Color.parseColor("#E94057"));
         btn.setCompoundDrawablesWithIntrinsicBounds(drawableId, 0, 0, 0);
         btn.setTextColor(Color.WHITE);
     }
-
     public void changeColorTwo(CardView cv, Button btn, int drawableId) {
         cv.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white));
         btn.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white));

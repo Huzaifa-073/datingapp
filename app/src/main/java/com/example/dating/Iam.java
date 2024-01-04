@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class Iam extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class Iam extends AppCompatActivity {
 
         CardView woman = findViewById(R.id.woman);
         CardView man = findViewById(R.id.man);
-        ImageView back = findViewById(R.id.back);
+        ImageView back = findViewById(R.id.backImage);
         Button submit = findViewById(R.id.submitButton);
 
         woman.setOnClickListener(new View.OnClickListener() {
