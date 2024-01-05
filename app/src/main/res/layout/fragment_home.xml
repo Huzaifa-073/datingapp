@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="22dp"
         android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:id="@+id/discoverText"
         android:layout_width="151dp"
         android:layout_height="29dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="22dp"
         android:fontFamily="@font/skbold"
         android:gravity="center"
         android:text="Discover"
@@ -31,79 +31,21 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/backImage"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/placeText"
-        android:layout_width="151dp"
-        android:layout_height="14dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/skregular"
-        android:gravity="center"
-        android:text="Chicago, II"
-        android:textColor="@color/black"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/mainPhoto"
-        app:layout_constraintEnd_toStartOf="@+id/filterImage"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/backImage"
-        app:layout_constraintTop_toBottomOf="@+id/discoverText" />
+    <TextView android:id="@+id/placeText" android:layout_width="151dp" android:layout_height="14dp" android:layout_marginBottom="30dp" android:fontFamily="@font/skregular" android:gravity="center" android:text="Chicago, II" android:textColor="@color/black" android:textSize="12dp" app:layout_constraintBottom_toTopOf="@+id/mainPhoto" app:layout_constraintEnd_toStartOf="@+id/filterImage" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/backImage" app:layout_constraintTop_toBottomOf="@+id/discoverText"/>
 
     <ImageView
         android:id="@+id/filterImage"
         android:layout_width="52dp"
         android:layout_height="52dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="40dp"
         android:src="@drawable/filter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/mainPhoto"
-        android:layout_width="299dp"
-        android:layout_height="466dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/content"
-        app:layout_constraintBottom_toTopOf="@+id/starImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backImage" />
-
-    <ImageView
-        android:id="@+id/dislikeImage"
-        android:layout_width="100dp"
-        android:layout_height="110dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/dislike"
-        app:layout_constraintEnd_toStartOf="@+id/likeImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainPhoto" />
-
-    <ImageView
-        android:id="@+id/likeImage"
-        android:layout_width="120dp"
-        android:layout_height="110dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/like"
-        app:layout_constraintEnd_toStartOf="@+id/starImage"
-        app:layout_constraintStart_toEndOf="@+id/dislikeImage"
-        app:layout_constraintTop_toBottomOf="@+id/mainPhoto" />
-
-    <ImageView
-        android:id="@+id/starImage"
-        android:layout_width="100dp"
-        android:layout_height="110dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/star"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/likeImage"
-        app:layout_constraintTop_toBottomOf="@+id/mainPhoto" />
+    <ImageView android:id="@+id/mainPhoto" android:layout_width="299dp" android:layout_height="466dp" android:layout_marginTop="25dp" android:src="@drawable/content" app:layout_constraintBottom_toTopOf="@+id/starImage" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/backImage"/>
+    <ImageView android:id="@+id/dislikeImage" android:layout_width="100dp" android:layout_height="110dp" android:layout_gravity="center_vertical" android:layout_marginStart="30dp" android:layout_marginTop="15dp" android:src="@drawable/dislike" app:layout_constraintEnd_toStartOf="@+id/likeImage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
+    <ImageView android:id="@+id/likeImage" android:layout_width="120dp" android:layout_height="110dp" android:layout_gravity="center" android:layout_marginTop="15dp" android:src="@drawable/like" app:layout_constraintEnd_toStartOf="@+id/starImage" app:layout_constraintStart_toEndOf="@+id/dislikeImage" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
+    <ImageView android:id="@+id/starImage" android:layout_width="100dp" android:layout_height="110dp" android:layout_gravity="center" android:layout_marginTop="15dp" android:layout_marginEnd="30dp" android:src="@drawable/star" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/likeImage" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
 
     <!-- CardView 1 -->
     <androidx.cardview.widget.CardView
@@ -258,26 +200,25 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/swipeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainPhoto" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/swipeButton"
         android:layout_width="295dp"
         android:layout_height="56dp"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="140dp"
-        android:visibility="invisible"
         android:background="#FDECEE"
         android:fontFamily="@font/skbold"
         android:gravity="center"
         android:text="Keep swiping"
         android:textColor="#E94057"
         android:textSize="16dp"
+        android:visibility="invisible"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
