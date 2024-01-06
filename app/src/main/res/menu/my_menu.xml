@@ -5,25 +5,21 @@
     <item
         android:id="@+id/main"
         android:icon="@drawable/home"
-        android:title=""
-        app:actionLayout="@layout/custom_menu_item"/>
+        android:title="" />
 
     <item
         android:id="@+id/like"
         android:icon="@drawable/heart"
-        android:title=""
-        app:actionLayout="@layout/custom_menu_item"/>
+        android:title="" />
 
     <item
         android:id="@+id/message"
         android:icon="@drawable/msg"
-        android:title=""
-        app:actionLayout="@layout/custom_menu_item"/>
+        android:title="" />
 
     <item
         android:id="@+id/profile"
         android:icon="@drawable/psn"
-        android:title=""
-        app:actionLayout="@layout/custom_menu_item"/>
+        android:title="" />
 
 </menu>

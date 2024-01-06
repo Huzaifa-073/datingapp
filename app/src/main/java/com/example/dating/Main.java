@@ -15,6 +15,7 @@ public class Main extends AppCompatActivity implements NavigationBarView.OnItemS
 
     FrameLayout frameLayout;
     Home homeFragment = new Home();
+    Messages messageFragment = new Messages();
     Likes likeFragment = new Likes();
     BottomNavigationView navigationView;
 
@@ -27,18 +28,25 @@ public class Main extends AppCompatActivity implements NavigationBarView.OnItemS
         navigationView = findViewById(R.id.navBar);
         navigationView.setOnItemSelectedListener(this);
         navigationView.setSelectedItemId(R.id.main);
+
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+
         if (id == R.id.main) {
             getSupportFragmentManager().beginTransaction().replace(frameLayout.getId(), homeFragment).commit();
             return true;
-        } else if ( id == R.id.like ) {
+        } else if (id == R.id.like) {
             getSupportFragmentManager().beginTransaction().replace(frameLayout.getId(), likeFragment).commit();
             return true;
+        } else if (id == R.id.message) {
+            getSupportFragmentManager().beginTransaction().replace(frameLayout.getId(), messageFragment).commit();
+            return true;
         }
+
         return false;
     }
+
 }

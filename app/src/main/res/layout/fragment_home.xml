@@ -11,7 +11,7 @@
         android:id="@+id/backImage"
         android:layout_width="52dp"
         android:layout_height="52dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="22dp"
         android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,13 +38,25 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginTop="22dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="30dp"
         android:src="@drawable/filter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageView android:id="@+id/mainPhoto" android:layout_width="299dp" android:layout_height="466dp" android:layout_marginTop="25dp" android:src="@drawable/content" app:layout_constraintBottom_toTopOf="@+id/starImage" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/backImage"/>
-    <ImageView android:id="@+id/dislikeImage" android:layout_width="100dp" android:layout_height="110dp" android:layout_gravity="center_vertical" android:layout_marginStart="30dp" android:layout_marginTop="15dp" android:src="@drawable/dislike" app:layout_constraintEnd_toStartOf="@+id/likeImage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
-    <ImageView android:id="@+id/likeImage" android:layout_width="120dp" android:layout_height="110dp" android:layout_gravity="center" android:layout_marginTop="15dp" android:src="@drawable/like" app:layout_constraintEnd_toStartOf="@+id/starImage" app:layout_constraintStart_toEndOf="@+id/dislikeImage" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
+    <ImageView android:id="@+id/dislikeImage" android:layout_width="100dp" android:layout_height="110dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="30dp" android:layout_marginTop="15dp"
+        android:src="@drawable/dislikenew" app:layout_constraintEnd_toStartOf="@+id/likeImage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
+    <ImageView
+        android:id="@+id/likeImage"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/like"
+        app:layout_constraintEnd_toStartOf="@+id/starImage"
+        app:layout_constraintStart_toEndOf="@+id/dislikeImage"
+        app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
     <ImageView android:id="@+id/starImage" android:layout_width="100dp" android:layout_height="110dp" android:layout_gravity="center" android:layout_marginTop="15dp" android:layout_marginEnd="30dp" android:src="@drawable/star" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/likeImage" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
 
     <!-- CardView 1 -->

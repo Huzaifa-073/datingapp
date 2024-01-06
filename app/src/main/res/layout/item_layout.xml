@@ -7,6 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="145dp"
+        android:id="@+id/cardView"
         android:layout_height="200dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
@@ -50,12 +51,14 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_marginTop="165dp"
             android:layout_width="match_parent"
+            android:id="@+id/relativeLayout"
             android:layout_gravity="bottom"
             android:layout_height="match_parent">
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="25dp"
+                android:id="@+id/view"
                 android:foregroundGravity="bottom"
                 android:background="@android:color/darker_gray"
                 android:layout_centerHorizontal="true"/>

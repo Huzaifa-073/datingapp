@@ -5,8 +5,6 @@
         <item name="colorPrimary">#ffffff</item>
         <item name="colorSecondary">@color/red</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="colorPrimaryDark">@color/white</item>
-        <item name="android:windowBackground">#ffffff</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
@@ -19,17 +17,5 @@
     </style>
 
     <style name="Theme.Dating" parent="Base.Theme.Dating" />
-
-    <!-- res/values/styles.xml -->
-    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="android:background">#FFFFFF</item>
-        <item name="itemIconTint">#757575</item>
-        <item name="itemTextColor">#757575</item>
-    </style>
-
-    <style name="MyBottomNavigationItemStyle" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="android:background">@color/white</item>
-    </style>
-
 
 </resources>
