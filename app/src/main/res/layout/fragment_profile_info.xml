@@ -8,6 +8,16 @@
     tools:ignore="ExtraText">
 
     <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/profileInfoPicture"
         android:layout_height="415dp"
         android:layout_width="0dp"
@@ -18,13 +28,23 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
+    <ImageView
+        android:id="@+id/backButtonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="395dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:cardCornerRadius="15dp"
+        app:cardCornerRadius="30dp"
         android:paddingBottom="50sp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -185,6 +205,60 @@
                     android:src="@drawable/interest5"
                     app:layout_constraintStart_toEndOf="@+id/interest_4"
                     app:layout_constraintTop_toTopOf="@+id/interest_4" />
+                
+                <TextView
+                    android:id="@+id/galleryHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/skbold"
+                    android:textSize="16sp"
+                    android:text="Gallery"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintStart_toStartOf="@+id/interest_4"
+                    app:layout_constraintTop_toBottomOf="@+id/interest_4" />
+                
+                <ImageView
+                    android:id="@+id/galleryPicture1"
+                    android:layout_width="142dp"
+                    android:layout_height="190dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/galleryphoto1"
+                    app:layout_constraintStart_toStartOf="@+id/galleryHeading"
+                    app:layout_constraintTop_toBottomOf="@+id/galleryHeading" />
+
+                <ImageView
+                    android:id="@+id/galleryPicture2"
+                    android:layout_width="142dp"
+                    android:layout_height="190dp"
+                    android:src="@drawable/galleryphoto2"
+                    app:layout_constraintEnd_toEndOf="@+id/interest_3"
+                    app:layout_constraintTop_toTopOf="@+id/galleryPicture1" />
+
+                <ImageView
+                    android:id="@+id/galleryPicture3"
+                    android:layout_width="92dp"
+                    android:layout_height="122dp"
+                    android:src="@drawable/galleryphoto3"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="@+id/galleryPicture1"
+                    app:layout_constraintTop_toBottomOf="@+id/galleryPicture1" />
+
+                <ImageView
+                    android:id="@+id/galleryPicture4"
+                    android:layout_width="92dp"
+                    android:layout_height="122dp"
+                    android:src="@drawable/galleryphoto4"
+                    app:layout_constraintEnd_toStartOf="@+id/galleryPicture5"
+                    app:layout_constraintStart_toEndOf="@+id/galleryPicture3"
+                    app:layout_constraintTop_toTopOf="@+id/galleryPicture3" />
+
+                <ImageView
+                    android:id="@+id/galleryPicture5"
+                    android:layout_width="92dp"
+                    android:layout_height="122dp"
+                    android:src="@drawable/galleryphoto5"
+                    app:layout_constraintEnd_toEndOf="@+id/interest_3"
+                    app:layout_constraintTop_toTopOf="@+id/galleryPicture4" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
