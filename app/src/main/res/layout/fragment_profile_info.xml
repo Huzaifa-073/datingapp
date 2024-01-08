@@ -1,14 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileInfo">
+    tools:context=".ProfileInfo"
+    tools:ignore="ExtraText">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/profileInfoPicture"
+        android:layout_height="415dp"
+        android:layout_width="0dp"
+        android:src="@drawable/profileInfoPicture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
-</FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="395dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="15dp"
+        android:paddingBottom="50sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileInfoPicture">
+
+        <ScrollView
+            android:id="@+id/profileInfoPicScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:id="@+id/nameAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/skbold"
+                    android:text="Jessica Parker, 23"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/sendButton"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="55dp"
+                    android:src="@drawable/sendButton"
+                    app:layout_constraintBottom_toBottomOf="@+id/occupation"
+                    app:layout_constraintStart_toEndOf="@+id/nameAge"
+                    app:layout_constraintTop_toTopOf="@+id/nameAge"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/occupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:fontFamily="@font/skregular"
+                    android:text="Professional Model"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/nameAge"
+                    app:layout_constraintTop_toBottomOf="@+id/nameAge"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/locationHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/skbold"
+                    android:text="Location"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/occupation"
+                    app:layout_constraintTop_toBottomOf="@+id/occupation"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:fontFamily="@font/skregular"
+                    android:text="Chicago, IL United States"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/locationHeading"
+                    app:layout_constraintTop_toBottomOf="@+id/locationHeading" />
+
+                <ImageView
+                    android:id="@+id/locationIcon"
+                    android:layout_width="61dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/locationIcon"
+                    app:layout_constraintBottom_toBottomOf="@+id/location"
+                    app:layout_constraintEnd_toEndOf="@+id/sendButton"
+                    app:layout_constraintTop_toTopOf="@+id/locationHeading" />
+
+                <TextView
+                    android:id="@+id/aboutHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="35sp"
+                    android:fontFamily="@font/skbold"
+                    android:text="About"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/location"
+                    app:layout_constraintTop_toBottomOf="@+id/location" />
+
+                <TextView
+                    android:id="@+id/aboutContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/skregular"
+                    android:maxLines="3"
+                    android:text="My name is Jessica Parker and I enjoy meeting
+                    new people and finding ways to help them have an
+                    uplifting experience. I enjoy reading.."
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/aboutHeading"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutHeading" />
+
+                <TextView
+                    android:id="@+id/interestsHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="35sp"
+                    android:fontFamily="@font/skbold"
+                    android:text="Interests"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/aboutContent"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutContent" />
+
+                <ImageView
+                    android:id="@+id/interest_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/interest1"
+                    app:layout_constraintStart_toStartOf="@+id/interestsHeading"
+                    app:layout_constraintTop_toBottomOf="@+id/interestsHeading" />
+
+                <ImageView
+                    android:id="@+id/interest_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/interest2"
+                    app:layout_constraintStart_toEndOf="@+id/interest_1"
+                    app:layout_constraintTop_toTopOf="@+id/interest_1" />
+
+                <ImageView
+                    android:id="@+id/interest_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/interest3"
+                    app:layout_constraintStart_toEndOf="@+id/interest_2"
+                    app:layout_constraintTop_toTopOf="@+id/interest_2" />
+
+                <ImageView
+                    android:id="@+id/interest_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/interest4"
+                    app:layout_constraintStart_toStartOf="@+id/interest_1"
+                    app:layout_constraintTop_toBottomOf="@+id/interest_1" />
+
+                <ImageView
+                    android:id="@+id/interest_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/interest5"
+                    app:layout_constraintStart_toEndOf="@+id/interest_4"
+                    app:layout_constraintTop_toTopOf="@+id/interest_4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
