@@ -17,6 +17,7 @@ public class Main extends AppCompatActivity implements NavigationBarView.OnItemS
     Home homeFragment = new Home();
     Messages messageFragment = new Messages();
     Likes likeFragment = new Likes();
+    ProfileInfo profileInfo = new ProfileInfo();
     BottomNavigationView navigationView;
 
     @Override
@@ -43,6 +44,9 @@ public class Main extends AppCompatActivity implements NavigationBarView.OnItemS
             return true;
         } else if (id == R.id.message) {
             getSupportFragmentManager().beginTransaction().replace(frameLayout.getId(), messageFragment).commit();
+            return true;
+        } else if (id == R.id.profile) {
+            getSupportFragmentManager().beginTransaction().replace(frameLayout.getId(), profileInfo).commit();
             return true;
         }
 
