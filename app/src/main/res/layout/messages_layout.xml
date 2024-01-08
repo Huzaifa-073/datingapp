@@ -5,10 +5,11 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/imageView8"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="3dp"
-        android:src="@drawable/girlOne"
+        android:src="@drawable/girl1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
