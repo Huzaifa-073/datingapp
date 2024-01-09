@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/girl"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="1dp" />
+
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/profile_image"
+        android:text="@string/grace"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profile_activity_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_name"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/profile_image"
+        android:text="@string/online"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+
+    <LinearLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/profile_image"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#9A9595" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/today"
+            android:textAlignment="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#9A9595" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/chat_bottom_layout"
+        android:layout_below="@+id/second_layout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#fdf2f3"
+                app:strokeColor="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sample_chat_1" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sample_text_time"
+                android:textColor="#818181"
+                tools:ignore="TextContrastCheck" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="#f3f3f3"
+                app:strokeColor="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sample_chat2" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sample_text_time"
+                android:textColor="#818181"
+                tools:ignore="TextContrastCheck" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#fdf2f3"
+                app:strokeColor="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sure_let_s_do_it"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sample_text_time"
+                android:textColor="#818181"
+                tools:ignore="TextContrastCheck" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="#f3f3f3"
+                app:strokeColor="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sample_chat_4"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sample_text_time"
+                android:textColor="#818181"
+                tools:ignore="TextContrastCheck" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#fdf2f3"
+                app:strokeColor="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sample_chat_1"
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sample_text_time"
+                android:textColor="#818181"
+                tools:ignore="TextContrastCheck" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="#f3f3f3"
+                app:strokeColor="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sample_chat_1"
+                    tools:ignore="TextSizeCheck" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/sample_text_time"
+                android:textColor="#818181" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/chat_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/mic_icon"
+            android:background="@drawable/search_bg">
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                app:queryHint="Your Message" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/mic_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mic_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

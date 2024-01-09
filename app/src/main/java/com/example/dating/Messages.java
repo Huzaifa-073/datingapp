@@ -1,5 +1,6 @@
 package com.example.dating;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -27,7 +28,7 @@ public class Messages extends Fragment implements MessageClickListener {
         searchView = view.findViewById(R.id.searchView);
 
         dataModels = new ArrayList<>();
-        dataModels.add(new MessagesModel(R.drawable.girl, "Olivia","Typing...", "22 min"));
+        dataModels.add(new MessagesModel(R.drawable.girl, "Olivia", "Typing...", "22 min"));
         dataModels.add(new MessagesModel(R.drawable.girl2, "Emma", "Hey, How are you?", "17 min"));
         dataModels.add(new MessagesModel(R.drawable.girl3, "Ava", "What's up?", "35 min"));
         dataModels.add(new MessagesModel(R.drawable.girl4, "Sophia", "You: How was your day?", "30 min"));
@@ -36,7 +37,7 @@ public class Messages extends Fragment implements MessageClickListener {
         dataModels.add(new MessagesModel(R.drawable.girl7, "Mia", "You: Hey!", "50 min"));
         dataModels.add(new MessagesModel(R.drawable.girl8, "Harper", "Good night!", "10 min"));
         dataModels.add(new MessagesModel(R.drawable.girl9, "Evelyn", "You: LOL, that's hilarious!", "5 min"));
-        dataModels.add(new MessagesModel(R.drawable.girl10,"Abigail", "Can you send me the details?", "40 min"));
+        dataModels.add(new MessagesModel(R.drawable.girl10, "Abigail", "Can you send me the details?", "40 min"));
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         MessageAdapter adapter = new MessageAdapter(dataModels);
@@ -53,7 +54,14 @@ public class Messages extends Fragment implements MessageClickListener {
 
     @Override
     public void onClick(View view, int pos) {
+
         String name = dataModels.get(pos).getPersonName();
-        Toast.makeText(getContext(), "You choose: " + name, Toast.LENGTH_SHORT).show();
+        int image = dataModels.get(pos).getPersonImage();
+
+        Intent intent = new Intent(getActivity(), ChatActivity.class);
+        intent.putExtra("NAME_KEY", name);
+        intent.putExtra("IMAGE_KEY", image);
+        startActivity(intent);
+
     }
 }
