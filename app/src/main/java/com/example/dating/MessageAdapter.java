@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,6 +32,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHold
         private TextView personName;
         private TextView personMessage;
         private TextView personTime;
+
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             this.personImage = itemView.findViewById(R.id.image);
@@ -42,7 +44,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHold
 
         @Override
         public void onClick(View view) {
-            if ( clickListener != null ) {
+            if (clickListener != null) {
                 clickListener.onClick(view, getAdapterPosition());
             }
         }

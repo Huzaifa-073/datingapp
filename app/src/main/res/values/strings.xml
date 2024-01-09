@@ -2,4 +2,12 @@
     <string name="app_name">Dating</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sample_chat_1">Hi Jake, how are you? I saw on the app that we’ve crossed paths several times this week 😄</string>
+    <string name="sample_text_time">2:55 PM</string>
+    <string name="sample_chat2">Haha truly! Nice to meet you Grace! What about a cup of coffee today evening? ☕️</string>
+    <string name="sample_chat_4">Great I will write later the exact time and place. See you soon!</string>
+    <string name="online">• Online</string>
+    <string name="sure_let_s_do_it">Sure, let’s do it! 😊</string>
+    <string name="today">Today</string>
+    <string name="grace">Grace</string>
 </resources>
