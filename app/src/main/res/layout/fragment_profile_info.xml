@@ -21,7 +21,9 @@
         android:id="@+id/profileInfoPicture"
         android:layout_width="0dp"
         android:layout_height="415dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/main2"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +72,7 @@
                     android:layout_height="36dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="35dp"
+                    android:textColor="@color/black"
                     android:fontFamily="@font/skbold"
                     android:text="Jessica Parker, 23"
                     android:textSize="24sp"
@@ -95,6 +98,7 @@
                     android:layout_height="21dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginBottom="35dp"
+                    android:textColor="@color/black"
                     android:fontFamily="@font/skregular"
                     android:text="Professional Model"
                     android:textSize="14sp"
@@ -111,6 +115,7 @@
                     android:layout_marginTop="35dp"
                     android:fontFamily="@font/skbold"
                     android:text="Location"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/occupation"
@@ -119,6 +124,7 @@
                 <TextView
                     android:id="@+id/location"
                     android:layout_width="180dp"
+                    android:textColor="@color/black"
                     android:layout_height="21dp"
                     android:layout_marginStart="30dp"
                     android:layout_marginBottom="35dp"
@@ -155,24 +161,27 @@
                     android:fontFamily="@font/skbold"
                     android:text="About"
                     android:textSize="16sp"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/location" />
 
                 <TextView
                     android:id="@+id/aboutContent"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_marginBottom="35dp"
                     android:fontFamily="@font/skregular"
                     android:maxLines="3"
-                    android:text="My name is Jessica Parker and I enjoy meeting
-                    new people and finding ways to help them have an
-                    uplifting experience. I enjoy reading."
+                    android:text="My name is Jessica Parker and I enjoy meeting new people and finding ways to help them have an uplifting experience. I enjoy reading."
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/interestsHeading"
-                    app:layout_constraintStart_toStartOf="@+id/aboutHeading"
-                    app:layout_constraintTop_toBottomOf="@+id/aboutHeading" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutHeading"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <TextView
                     android:id="@+id/interestsHeading"
@@ -181,6 +190,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="35sp"
                     android:fontFamily="@font/skbold"
+                    android:textColor="@color/black"
                     android:text="Interests"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -190,8 +200,8 @@
                     android:id="@+id/interest_1"
                     android:layout_width="140dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="15sp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="15dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -247,7 +257,7 @@
                     android:id="@+id/interest_3"
                     android:layout_width="140dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="26dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/interest4"
                     app:cardBackgroundColor="@color/white"
@@ -341,7 +351,6 @@
                     app:layout_constraintEnd_toStartOf="@+id/galleryPicture4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/galleryPicture1" />
-
                 <ImageView
                     android:id="@+id/galleryPicture4"
                     android:layout_width="90dp"
@@ -353,7 +362,6 @@
                     app:layout_constraintEnd_toStartOf="@+id/galleryPicture5"
                     app:layout_constraintStart_toEndOf="@+id/galleryPicture3"
                     app:layout_constraintTop_toBottomOf="@+id/galleryPicture1" />
-
                 <ImageView
                     android:id="@+id/galleryPicture5"
                     android:layout_width="91dp"
@@ -364,11 +372,7 @@
                     android:src="@drawable/mp5"
                     app:layout_constraintStart_toEndOf="@+id/galleryPicture4"
                     app:layout_constraintTop_toBottomOf="@+id/galleryPicture2" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </ScrollView>
-
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

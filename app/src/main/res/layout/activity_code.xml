@@ -9,8 +9,8 @@
     tools:context=".Code">
 
     <ImageView
-        android:id="@+id/backImage"
         android:layout_width="52dp"
+        android:id="@+id/backImage"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"

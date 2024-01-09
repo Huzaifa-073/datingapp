@@ -18,14 +18,13 @@ import java.util.ArrayList;
 public class Messages extends Fragment implements MessageClickListener {
 
     private ArrayList<MessagesModel> dataModels;
-    private SearchView searchView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_messages, container, false);
-        searchView = view.findViewById(R.id.searchView);
+        SearchView searchView = view.findViewById(R.id.searchView);
 
         dataModels = new ArrayList<>();
         dataModels.add(new MessagesModel(R.drawable.girl, "Olivia", "Typing...", "22 min"));

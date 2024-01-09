@@ -31,7 +31,22 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/backImage"
         app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:id="@+id/placeText" android:layout_width="151dp" android:layout_height="14dp" android:layout_marginBottom="30dp" android:fontFamily="@font/skregular" android:gravity="center" android:text="Chicago, II" android:textColor="@color/black" android:textSize="12dp" app:layout_constraintBottom_toTopOf="@+id/mainPhoto" app:layout_constraintEnd_toStartOf="@+id/filterImage" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/backImage" app:layout_constraintTop_toBottomOf="@+id/discoverText"/>
+
+    <TextView
+        android:id="@+id/placeText"
+        android:layout_width="151dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/skregular"
+        android:gravity="center"
+        android:text="Chicago, II"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainPhoto"
+        app:layout_constraintEnd_toStartOf="@+id/filterImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backImage"
+        app:layout_constraintTop_toBottomOf="@+id/discoverText"/>
 
     <ImageView
         android:id="@+id/filterImage"
@@ -42,11 +57,31 @@
         android:src="@drawable/filter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <ImageView android:id="@+id/mainPhoto" android:layout_width="299dp" android:layout_height="466dp" android:layout_marginTop="25dp" android:src="@drawable/content" app:layout_constraintBottom_toTopOf="@+id/starImage" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/backImage"/>
-    <ImageView android:id="@+id/dislikeImage" android:layout_width="100dp" android:layout_height="110dp"
+
+    <ImageView
+        android:id="@+id/mainPhoto"
+        android:layout_width="299dp"
+        android:layout_height="466dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/content"
+        app:layout_constraintBottom_toTopOf="@+id/starImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backImage"/>
+
+    <ImageView
+        android:id="@+id/dislikeImage"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="30dp" android:layout_marginTop="15dp"
-        android:src="@drawable/dislikenew" app:layout_constraintEnd_toStartOf="@+id/likeImage" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/dislikenew"
+        app:layout_constraintEnd_toStartOf="@+id/likeImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
+
     <ImageView
         android:id="@+id/likeImage"
         android:layout_width="120dp"
@@ -57,179 +92,18 @@
         app:layout_constraintEnd_toStartOf="@+id/starImage"
         app:layout_constraintStart_toEndOf="@+id/dislikeImage"
         app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
-    <ImageView android:id="@+id/starImage" android:layout_width="100dp" android:layout_height="110dp" android:layout_gravity="center" android:layout_marginTop="15dp" android:layout_marginEnd="30dp" android:src="@drawable/star" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/likeImage" app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
 
-    <!-- CardView 1 -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvOne"
-        android:layout_width="160dp"
-        android:layout_height="240dp"
-        android:visibility="invisible"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="50dp"
-        android:elevation="12dp"
-        android:rotation="10"
-        app:cardCornerRadius="8dp"
+    <ImageView
+        android:id="@+id/starImage"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/star"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/img1"
-            android:visibility="invisible"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/photo3"
-            tools:ignore="ContentDescription" />
-    </androidx.cardview.widget.CardView>
-
-    <!-- CardView 2 -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvTwo"
-        android:layout_width="160dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="150dp"
-        android:elevation="12dp"
-        android:rotation="-10"
-        android:visibility="invisible"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/img2"
-            android:visibility="invisible"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/photo4"
-            tools:ignore="ContentDescription" />
-    </androidx.cardview.widget.CardView>
-
-    <!-- FrameLayout 1 -->
-    <FrameLayout
-        android:id="@+id/fl2"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="375dp"
-        android:rotation="-10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.cardview.widget.CardView
-            android:visibility="invisible"
-            android:id="@+id/cvFour"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:elevation="12dp">
-
-            <ImageView
-                android:visibility="invisible"
-                android:id="@+id/img4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/like"
-                tools:ignore="ContentDescription" />
-        </androidx.cardview.widget.CardView>
-    </FrameLayout>
-
-    <!-- FrameLayout 2 -->
-    <FrameLayout
-        android:visibility="invisible"
-        android:id="@+id/fl1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="25dp"
-        android:rotation="10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvThree"
-            android:visibility="invisible"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:elevation="12dp">
-
-            <ImageView
-                android:id="@+id/img3"
-                android:visibility="invisible"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/like"
-                tools:ignore="ContentDescription" />
-        </androidx.cardview.widget.CardView>
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/matchText"
-        android:visibility="invisible"
-        android:layout_width="295dp"
-        android:layout_height="51dp"
-        android:fontFamily="@font/skbold"
-        android:gravity="center"
-        android:text="It’s a match, Jake!"
-        android:textColor="@color/red"
-        android:textSize="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/convoText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fl2" />
-
-    <TextView
-        android:id="@+id/convoText"
-        android:layout_width="295dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="25dp"
-        android:visibility="invisible"
-        android:fontFamily="@font/skregular"
-        android:gravity="center"
-        android:text="Start a conversation now with each other"
-        android:textColor="@color/black"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/helloButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchText" />
-
-    <Button
-        android:id="@+id/helloButton"
-        android:layout_width="295dp"
-        android:visibility="invisible"
-        android:layout_height="56dp"
-        android:layout_marginBottom="5dp"
-        android:background="@color/red"
-        android:fontFamily="@font/skbold"
-        android:text="Say hello"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/swipeButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/swipeButton"
-        android:layout_width="295dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="6dp"
-        android:background="#FDECEE"
-        android:fontFamily="@font/skbold"
-        android:gravity="center"
-        android:text="Keep swiping"
-        android:textColor="#E94057"
-        android:textSize="16dp"
-        android:visibility="invisible"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helloButton" />
+        app:layout_constraintStart_toEndOf="@+id/likeImage"
+        app:layout_constraintTop_toBottomOf="@+id/mainPhoto"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

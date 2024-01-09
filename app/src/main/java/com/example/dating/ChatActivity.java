@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ChatActivity extends AppCompatActivity {
-
     TextView textView;
     ImageView imageView;
     @Override
@@ -15,8 +14,8 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        textView=findViewById(R.id.profile_name);
-        imageView=findViewById(R.id.profile_image);
+        textView = findViewById(R.id.profile_name);
+        imageView = findViewById(R.id.profile_image);
 
         String name = getIntent().getStringExtra("NAME_KEY");
         int imageResourceId = getIntent().getIntExtra("IMAGE_KEY", 0);

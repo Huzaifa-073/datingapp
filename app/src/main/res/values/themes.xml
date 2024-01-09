@@ -5,6 +5,7 @@
         <item name="colorPrimary">#ffffff</item>
         <item name="colorSecondary">@color/red</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowLightStatusBar">true</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 

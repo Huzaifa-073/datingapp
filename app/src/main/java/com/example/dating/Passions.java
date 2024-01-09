@@ -73,21 +73,11 @@ public class Passions extends AppCompatActivity implements View.OnClickListener 
 
         constraintLayout.setOnClickListener(this);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Iam.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Main.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

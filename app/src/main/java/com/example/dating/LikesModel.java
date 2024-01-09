@@ -1,7 +1,6 @@
 package com.example.dating;
 
 class LikesModel {
-
     int matchImage;
     String matchNameAge;
     int crossImage;

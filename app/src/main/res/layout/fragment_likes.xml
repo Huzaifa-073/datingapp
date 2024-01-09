@@ -7,7 +7,7 @@
     tools:context=".Likes">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textMatch"
         android:layout_width="295dp"
         android:layout_height="51dp"
         android:layout_marginStart="30dp"
@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/filter"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -30,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textInfo"
         android:layout_width="295dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
@@ -40,7 +41,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textMatch" />
 
     <GridView
         android:id="@+id/gridView"
@@ -53,6 +54,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textInfo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

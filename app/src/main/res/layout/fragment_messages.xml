@@ -7,7 +7,7 @@
     tools:context=".Messages">
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textMsg"
         android:layout_width="199dp"
         android:layout_height="51dp"
         android:layout_marginStart="30dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/filterImg"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginTop="30dp"
@@ -39,7 +39,7 @@
         android:queryHint="Search items"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textMsg" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

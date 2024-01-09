@@ -44,15 +44,6 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        confirmation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Iam.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,5 +57,14 @@ public class Profile extends AppCompatActivity {
                 editText2.setVisibility(View.VISIBLE);
             }
         });
+
+        confirmation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Iam.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

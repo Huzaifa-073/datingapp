@@ -5,10 +5,11 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@android:id/icon"
-        android:layout_width="75dp"
+    android:id="@android:id/icon"
+    android:layout_width="75dp"
     android:layout_height="75dp"
     android:layout_gravity="center"
     android:layout_margin="8dp"
     android:src="@drawable/ic_launcher_foreground" />
+
 </RelativeLayout>

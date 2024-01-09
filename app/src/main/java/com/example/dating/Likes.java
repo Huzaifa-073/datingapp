@@ -21,10 +21,10 @@ public class Likes extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_likes, container, false);
 
         GridView gridView = view.findViewById(R.id.gridView);
-        TextView matchText = view.findViewById(R.id.textView14);
         dataModels = new ArrayList<>();
 
         LikesModel likes1 = new LikesModel(R.drawable.one, "Leilani, 19", R.drawable.crossvec, R.drawable.likevec);
@@ -47,12 +47,6 @@ public class Likes extends Fragment {
 
             }
         });
-
-        if (dataModels.get(0).getLikeImage() == R.drawable.likevec) {
-            matchText.setVisibility(View.VISIBLE);
-        } else {
-            matchText.setVisibility(View.INVISIBLE);
-        }
 
         return view;
     }

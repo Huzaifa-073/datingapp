@@ -20,9 +20,17 @@ public class PhoneNum extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_num);
 
-        final CountryCodePicker countryCodePicker = findViewById(R.id.countryCodePicker);
-        final EditText editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
+        CountryCodePicker countryCodePicker = findViewById(R.id.countryCodePicker);
+        EditText editTextPhoneNumber = findViewById(R.id.editTextPhoneNumber);
         Button submitButton = findViewById(R.id.submitButton);
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Code.class);
+                startActivity(intent);
+            }
+        });
 
 //        submitButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -40,13 +48,5 @@ public class PhoneNum extends AppCompatActivity {
 //            }
 //        });
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Code.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 }

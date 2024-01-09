@@ -15,7 +15,6 @@ import java.util.List;
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHolder> {
     private MessageClickListener clickListener;
     private ArrayList<MessagesModel> dataModel;
-
     public MessageAdapter(ArrayList<MessagesModel> dataModel) {
         this.dataModel = dataModel;
     }
@@ -23,16 +22,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHold
     public void setClickListener(MessageClickListener clickListener) {
         this.clickListener = clickListener;
     }
-
-    public void updateList(List<MessagesModel> filteredList) {
-    }
-
     public class viewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView personImage;
         private TextView personName;
         private TextView personMessage;
         private TextView personTime;
-
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             this.personImage = itemView.findViewById(R.id.image);
@@ -41,7 +35,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHold
             this.personTime = itemView.findViewById(R.id.time);
             itemView.setOnClickListener(this);
         }
-
         @Override
         public void onClick(View view) {
             if (clickListener != null) {
@@ -49,15 +42,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHold
             }
         }
     }
-
-
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View listItems = LayoutInflater.from(parent.getContext()).inflate(R.layout.messages_layout, parent, false);
         return new viewHolder(listItems);
     }
-
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         MessagesModel messagesModel = dataModel.get(position);
@@ -66,7 +56,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.viewHold
         holder.personMessage.setText(messagesModel.getPersonMessage());
         holder.personTime.setText(messagesModel.getPersonTime());
     }
-
     @Override
     public int getItemCount() {
         return dataModel.size();
