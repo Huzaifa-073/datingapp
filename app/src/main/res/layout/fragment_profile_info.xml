@@ -22,10 +22,8 @@
         android:layout_width="0dp"
         android:layout_height="415dp"
         android:src="@drawable/main2"
-        app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
@@ -68,9 +66,9 @@
 
                 <TextView
                     android:id="@+id/nameAge"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="36dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="35dp"
                     android:fontFamily="@font/skbold"
                     android:text="Jessica Parker, 23"
@@ -83,20 +81,19 @@
                     android:id="@+id/sendButton"
                     android:layout_width="52dp"
                     android:layout_height="52dp"
-                    android:layout_marginStart="55dp"
-                    android:layout_marginEnd="53dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="30dp"
                     android:src="@drawable/ss"
                     app:layout_constraintBottom_toBottomOf="@+id/occupation"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/nameAge"
-                    app:layout_constraintTop_toTopOf="@+id/nameAge"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/occupation"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="21dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginBottom="35dp"
                     android:fontFamily="@font/skregular"
                     android:text="Professional Model"
@@ -108,9 +105,9 @@
 
                 <TextView
                     android:id="@+id/locationHeading"
-                    android:layout_width="wrap_content"
+                    android:layout_width="66dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="35dp"
                     android:fontFamily="@font/skbold"
                     android:text="Location"
@@ -121,9 +118,9 @@
 
                 <TextView
                     android:id="@+id/location"
-                    android:layout_width="wrap_content"
+                    android:layout_width="180dp"
                     android:layout_height="21dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginBottom="35dp"
                     android:fontFamily="@font/skregular"
                     android:text="Chicago, IL United States"
@@ -132,23 +129,28 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/locationHeading" />
 
-                <ImageView
-                    android:id="@+id/locationIcon"
-                    android:layout_width="61dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="90dp"
-                    android:layout_marginEnd="55dp"
-                    android:src="@drawable/km"
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/light_red"
+                    android:drawableLeft="@drawable/location"
+                    android:fontFamily="@font/skbold"
+                    android:paddingStart="16dp"
+                    android:text="1 km"
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    app:backgroundTint="@null"
                     app:layout_constraintBottom_toBottomOf="@+id/location"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/location"
                     app:layout_constraintTop_toTopOf="@+id/locationHeading" />
 
                 <TextView
                     android:id="@+id/aboutHeading"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="35sp"
                     android:fontFamily="@font/skbold"
                     android:text="About"
@@ -160,12 +162,13 @@
                     android:id="@+id/aboutContent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_marginBottom="35dp"
                     android:fontFamily="@font/skregular"
                     android:maxLines="3"
                     android:text="My name is Jessica Parker and I enjoy meeting
                     new people and finding ways to help them have an
-                    uplifting experience. I enjoy reading.."
+                    uplifting experience. I enjoy reading."
                     android:textSize="14sp"
                     app:layout_constraintBottom_toTopOf="@+id/interestsHeading"
                     app:layout_constraintStart_toStartOf="@+id/aboutHeading"
@@ -175,7 +178,7 @@
                     android:id="@+id/interestsHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="35sp"
                     android:fontFamily="@font/skbold"
                     android:text="Interests"
@@ -183,115 +186,184 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/aboutContent" />
 
-                <ImageView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/interest_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="15sp"
-                    android:src="@drawable/interest1"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/interestsHeading" />
+                    app:layout_constraintTop_toBottomOf="@+id/interestsHeading">
 
-                <ImageView
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/travel"
+                        android:fontFamily="@font/skregular"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Travelling"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/interest_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="10dp"
-                    android:src="@drawable/interest2"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/books"
+                    android:fontFamily="@font/skbold"
+                    android:text="Books"
+                    android:textColor="@color/red"
+                    app:backgroundTint="@null"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp"
                     app:layout_constraintStart_toEndOf="@+id/interest_1"
-                    app:layout_constraintTop_toTopOf="@+id/interest_1" />
+                    app:layout_constraintTop_toTopOf="@+id/interest_1">
 
-                <ImageView
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/books"
+                        android:fontFamily="@font/skregular"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Books"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/interest_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/interest3"
-                    app:layout_constraintStart_toEndOf="@+id/interest_2"
-                    app:layout_constraintTop_toTopOf="@+id/interest_2" />
-
-                <ImageView
-                    android:id="@+id/interest_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/interest4"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/interest_1" />
+                    app:layout_constraintTop_toBottomOf="@+id/interest_1">
 
-                <ImageView
-                    android:id="@+id/interest_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/my_music"
+                        android:fontFamily="@font/skregular"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Music"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/interest_4"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="10dp"
                     android:src="@drawable/interest5"
-                    app:layout_constraintStart_toEndOf="@+id/interest_4"
-                    app:layout_constraintTop_toTopOf="@+id/interest_4" />
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintStart_toEndOf="@+id/interest_3"
+                    app:layout_constraintTop_toTopOf="@+id/interest_3">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/shopping"
+                        android:fontFamily="@font/skregular"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="Shopping"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:id="@+id/galleryHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="35dp"
                     android:fontFamily="@font/skbold"
                     android:text="Gallery"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/interest_4" />
+                    app:layout_constraintTop_toBottomOf="@+id/interest_3" />
 
                 <ImageView
                     android:id="@+id/galleryPicture1"
-                    android:layout_width="142dp"
+                    android:layout_width="138dp"
                     android:layout_height="190dp"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/galleryphoto1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mp1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/galleryHeading" />
 
                 <ImageView
                     android:id="@+id/galleryPicture2"
-                    android:layout_width="142dp"
+                    android:layout_width="138dp"
                     android:layout_height="190dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="67dp"
-                    android:src="@drawable/galleryphoto2"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mp2"
                     app:layout_constraintStart_toEndOf="@+id/galleryPicture1"
                     app:layout_constraintTop_toTopOf="@+id/galleryPicture1" />
 
                 <ImageView
                     android:id="@+id/galleryPicture3"
-                    android:layout_width="92dp"
+                    android:layout_width="90dp"
                     android:layout_height="122dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/galleryphoto3"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mp3"
+                    app:layout_constraintEnd_toStartOf="@+id/galleryPicture4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/galleryPicture1" />
 
                 <ImageView
                     android:id="@+id/galleryPicture4"
-                    android:layout_width="92dp"
+                    android:layout_width="90dp"
                     android:layout_height="122dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginEnd="7dp"
-                    android:src="@drawable/galleryphoto4"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mp4"
                     app:layout_constraintEnd_toStartOf="@+id/galleryPicture5"
                     app:layout_constraintStart_toEndOf="@+id/galleryPicture3"
-                    app:layout_constraintTop_toTopOf="@+id/galleryPicture3" />
+                    app:layout_constraintTop_toBottomOf="@+id/galleryPicture1" />
 
                 <ImageView
                     android:id="@+id/galleryPicture5"
-                    android:layout_width="92dp"
+                    android:layout_width="91dp"
                     android:layout_height="122dp"
-                    android:layout_marginEnd="67dp"
-                    android:src="@drawable/galleryphoto5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/galleryPicture4" />
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mp5"
+                    app:layout_constraintStart_toEndOf="@+id/galleryPicture4"
+                    app:layout_constraintTop_toBottomOf="@+id/galleryPicture2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
